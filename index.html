@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Sweet 17 Selvi! 🌻</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="envelope-screen">
+      <div class="envelope-wrapper" onclick="openEnvelope()">
+        <div class="lid one"></div>
+        <div class="lid two"></div>
+        <div class="envelope"></div>
+        <div class="letter">
+          <p>-`✮´-<br />Untuk Selvi<br />Indriani<br />-`✮´-</p>
+        </div>
+      </div>
+      <p class="tap-hint">Tap the envelope to open</p>
+    </div>
+
+    <div id="main-content">
+      <div class="bg-pattern"></div>
+      <div class="floating-hearts" id="heartsContainer"></div>
+
+      <div class="music-control">
+        <button
+          onclick="toggleMusic()"
+          id="musicToggle"
+          class="pixel-btn music-btn-style"
+        >
+          <img id="musicIcon" src="images/high-volume.png" alt="icon" />
+          <span id="musicText">PLAY SONG</span>
+        </button>
+      </div>
+
+      <div class="card-container">
+        <div class="card-header">
+          <img src="images/Stat.png" class="header-img left-img" alt="Cake" />
+
+          <h1>LEVEL 17 UNLOCKED</h1>
+
+          <img
+            src="images/Stat.png"
+            class="header-img right-img"
+            alt="Flower"
+          />
+        </div>
+
+        <div class="paper-content">
+          <div class="paper-lines">
+            <p id="typewriter-text"></p>
+            <span class="cursor">|</span>
+          </div>
+        </div>
+
+        <div class="action-area">
+          <button class="pixel-btn" onclick="openWishModal()">
+            <img
+              src="images/dd6d9d25-8951-4809-a159-5fdc7af0d0f1.png"
+              class="btn-icon"
+            />
+            MAKE A WISH
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="wish-modal" class="modal-overlay">
+      <div class="modal-box">
+        <div class="modal-top">
+          <span>★ WISH GRANTED? ★</span>
+          <button class="close-btn" onclick="closeWishModal()">x</button>
+        </div>
+        <div class="modal-content">
+          <img
+            id="wish-image"
+            src=""
+            alt="Wish Icon"
+            style="width: 80px; display: none; margin: 0 auto 10px"
+          />
+          <p id="wish-result">Loading destiny...</p>
+        </div>
+      </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+      <source
+        src="audio/rainy-lofi-city-lofi-music-332746.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
